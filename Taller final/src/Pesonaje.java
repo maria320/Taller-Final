@@ -5,5 +5,6 @@ public abstract class Pesonaje {
 	public Pesonaje() {
 	
 	}
+	public void 
 
 }
