@@ -5,12 +5,13 @@ import processing.core.PApplet;
 public class Logica {
 	Personaje pers;
 
-	public Logica() {
-		pers=new Personaje();
+	public Logica(PApplet app) {
+		pers = new Personaje(app);
 
 	}
 
-	public void pintar() {
+	public void pintar(PApplet app) {
+		pers.pintar(app);
 
 	}
 
@@ -18,13 +19,12 @@ public class Logica {
 
 		switch (app.key) {
 		case '1':
-			
-			pers.accionUno();
 
+			pers.accionUno(app);
 
 			break;
 		case '2':
-
+			pers.accionDos();
 			break;
 
 		case '3':

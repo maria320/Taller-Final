@@ -13,11 +13,12 @@ Logica log;
 	}
 
 	public void setup() {
-		log=new Logica();
+		log=new Logica(this);
 
 	}
 
 	public void draw() {
+		log.pintar(this);
 		
 	}
 

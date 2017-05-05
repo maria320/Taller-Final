@@ -3,20 +3,23 @@ import processing.core.PConstants;
 import processing.core.PImage;
 
 public abstract class Elemento {
-	private PImage[] elmn;
+	private PImage elmn;
 	private int x, y;
 
-	public Elemento(PImage elemn, int x, int y) {
+	public Elemento(PImage elmn, int x, int y) {
+		this.elmn=elmn;
+		this.x=x;
+		this.y=y;
 
 	}
 
 	public void pintar(PApplet app) {
-		for (int i = 0; i < elmn.length; i++) {
+		
 			app.imageMode(PConstants.CENTER);
 
-			app.image(elmn[i], x, y);
+			app.image(elmn, x, y);
 			app.imageMode(PConstants.CORNER);
-		}
+		
 
 	}
 
